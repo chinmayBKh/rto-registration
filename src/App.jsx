@@ -51,11 +51,12 @@ function App() {
           />
           <Route
             path="/user/dashboard"
-            element>
-            <ProtectedRoute allowedRoles={["USER"]}>
-              <UserDashboard />
-            </ProtectedRoute>
-          </Route>
+            element={
+              <ProtectedRoute allowedRoles={["USER"]}>
+                <UserDashboard />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Officer */}
           <Route path="/officer/login" element={<OfficerLogin />} />
