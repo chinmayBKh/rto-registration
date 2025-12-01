@@ -14,6 +14,12 @@ import UpdateStatus from "./components/officer/UpdateStatus";
 
 import AdminDashboard from "./components/admin/AdminDashboard";
 
+import Feedback from "./components/common/Feedback";
+import HelpDesk from "./components/common/HelpDesk";
+import VehicleRegistration from "./components/common/VehicleRegistration";
+import RegisteringAuthority from "./components/common/RegisteringAuthority";
+
+
 function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center">
@@ -38,6 +44,12 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+
+           {/* Public Routes */}
+      <Route path="/feedback" element={<Feedback />} />
+      <Route path="/helpdesk" element={<HelpDesk />} />
+      <Route path="/vehicle-registration" element={<VehicleRegistration />} />
+      <Route path="/registering-authority" element={<RegisteringAuthority />} />
 
           {/* User */}
           <Route path="/user/login" element={<UserLogin />} />
@@ -90,6 +102,9 @@ function App() {
       </BrowserRouter>
     </AuthProvider>
   );
+
+  
+  
 }
 
 export default App;
